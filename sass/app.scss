@@ -1,0 +1,813 @@
+/*
+app.css
+=============
+
+Author:   Tony Termine
+Updated:  2014
+Notes:	  mintedition.com
+
+*/
+/* ==========================================================================
+   Color Pallette
+============================================================================= */
+$black: #2d2620;
+$green: #00a651;
+$lightGreen: #00bf5d;
+$clearGreen: rgba(0,166,81,0.9);
+$red: #e14d43;
+$orange: #d35c03;
+$yellow: #eaba22;
+$lightGray: #f0f0f0;
+$gray: #ccc;
+$slate: #2c3e50;
+$white: #fff;
+$ghost: #f3f3f3;
+
+/* ==========================================================================
+   Global Styles
+============================================================================= */
+body {
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active  {
+	outline: 0;
+	text-decoration: none;
+}
+
+a:focus {
+	color: $black !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+	font-family: "Oswald","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+}
+
+.img-centered {
+	margin: 0 auto;
+}
+
+.img-responsive {
+	@media screen\0 {
+		height: 100%;
+	}
+}
+
+/* ==========================================================================
+   Nav/Header Styles
+============================================================================= */
+
+nav {
+	box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6);
+}
+
+.navbar {
+	text-transform: uppercase;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+	min-height: 90px;
+}
+
+.navbar a:focus {
+	outline: 0;
+}
+
+.navbar .navbar-nav {
+	letter-spacing: 1px;
+}
+
+.navbar .navbar-nav li a {
+	color: $black;
+	@media(min-width:767px) {
+		margin-left: 10px;
+	}
+}
+
+.navbar .navbar-nav li a:focus {
+	outline: 0;
+}
+
+.navbar .navbar-nav li a:hover {
+	color: $green;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	background-color: $green;
+}
+
+.navbar-default,
+.navbar-inverse {
+	background-color: $white;
+	border: 0;
+}
+
+nav .main-logo {
+	height: 110px;
+	width: 280px;
+	margin: -15px 0 0 -37px;
+
+	@media(min-width:767px) {
+		height: 150px;
+		margin: -56px 0 -18px -50px;
+		padding: 13px 0 0 0;
+		width: 320px;
+	}
+}
+
+.navbar li {
+	@media(min-width:767px) {
+		padding-top: 11px;
+	}
+}
+
+.navbar-toggle {
+	border: none;
+	padding: 30px	0 7px 0;
+}
+
+.navbar-default .navbar-toggle i {
+	color: $green;
+	font-size: 2.1em;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: $white;
+}
+
+@media(min-width:767px) {
+	.navbar-fixed-top {
+		padding: 19px 0;
+		-webkit-transition: padding .3s;
+		-moz-transition: padding .3s;
+		transition: padding .3s;
+	}
+
+.navbar-fixed-top.navbar-shrink {
+	padding: 10px 0 0;
+	min-height: 80px;
+
+	.main-logo {
+		height: 110px;
+		width: 280px;
+		margin: -40px 0 0 -62px;
+	}
+
+	li {
+		padding: 0;
+	}
+}
+
+.navbar-fixed-top.navbar-shrink .navbar-brand {
+	font-size: 1.5em;
+	}
+}
+
+header {
+	background: $ghost;
+	color: $black;
+	text-align: center;
+}
+
+header .container {
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+header img {
+	display: block;
+	margin: 65px auto 20px;
+}
+
+@media(min-width:767px) {
+
+	header img {
+		max-width: 650px;
+		max-height: 350px;
+	}
+}
+
+header .intro-text .name {
+	display: block;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.5em;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+header .intro-text .skills {
+	color: $black;
+	font-family: "Oswald","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.25em;
+	font-weight: 300;
+	letter-spacing: 1px
+}
+
+@media(min-width:767px) {
+	header .container {
+		padding-top: 120px;
+		padding-bottom: 100px;
+	}
+
+	header .intro-text .name {
+		font-size: 4.75em;
+	}
+
+	header .intro-text .skills {
+		font-size: 2.5em;
+	}
+}
+
+/* ==========================================================================
+	Banner
+============================================================================= */
+
+.banner {
+	background: $black;
+	box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6);
+	color: $white;
+	min-height: 150px;
+	h2 {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.69em;
+		font-weight: 300;
+		padding: 120px 0 30px;
+		vertical-align: middle;
+		@media(min-width:480px) {
+			font-size: 2.8em;
+			letter-spacing: 1px;
+		}
+		@media(min-width:730px) {
+			font-size: 3.5em;
+			letter-spacing: 5px;
+			padding: 110px 0 50px;
+		}
+		@media(min-width:1200px) {
+			font-size: 5em;
+			letter-spacing: 8px;
+			padding: 120px 0 50px;
+		}
+	}
+	span {
+		border-bottom: 4px solid $white;
+	}
+}
+
+/* ==========================================================================
+	About Section
+============================================================================= */
+
+section h2 {
+	margin: 0;
+}
+
+section.success {
+	color: $black;
+	background: $white;
+	padding: 20px 0 40px;
+	@media(min-width:767px) {
+		padding-top: 20px;
+	}
+
+	img {
+		max-height: 600px;
+		max-width: 616px;
+		@media(min-width:1200px) {
+			float: right;
+			margin: 20px 0 20px;
+		}
+	}
+
+	h2 {
+		font-size: 2em;
+		margin: 40px 0 20px;
+		@media(min-width:1200px) {
+			float: left;
+			font-size: 1.63em;
+			padding: 0;
+			margin-top: 35px;
+		}
+	}
+
+	p {
+		color: $black;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-size: 1.6em;
+		text-align: center;
+		span {
+			color: $green;
+			font-weight: 700;
+		}
+		@media(min-width:767px) {
+			font-size: 1.7em;
+			padding: 22px 0 22px;
+		}
+		@media(min-width:1200px) {
+			text-align: left;
+		}
+	}
+	.col-lg-4 {
+		@media(min-width:767px) {
+			padding-left: 0;
+		}
+	}
+	.col-lg-2 {
+		padding: 1px;
+		@media(min-width:480px) {
+			padding-left: 0;
+		}
+	}
+}
+
+.service-list {
+	color: $black;
+	font-family: "Oswald","Open Sans Condensed",sans-serif;
+	font-size: 1.4em;
+	margin: 20px auto;
+	text-align: left;
+	@media(min-width:480px) {
+		display: none;
+	}
+	@media(min-width:1200px) {
+		display: block;
+		list-style-position: outside;
+		text-align: left;
+	}
+}
+
+/* ==========================================================================
+	Portfolio Section
+============================================================================= */
+
+#portfolio {
+	background: url('../img/brickwall.png');
+	color: $black;
+	padding: 120px 0 40px;
+	@media(min-width:767px) {
+		padding-top: 130px;
+	}
+
+	h2 {
+		letter-spacing: 1px;
+		margin-bottom: 20px;
+	}
+}
+
+#portfolio .portfolio-item {
+	right: 0;
+	margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: $clearGreen;
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s;
+	transition: all ease .5s;
+}
+
+#portfolio .caption {
+	h3, h4 {
+		color: $white;
+		text-align: center;
+	}
+}
+
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+	opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 20px;
+	margin-top: -12px;
+	text-align: center;
+	font-size: 20px;
+	color: $white;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+	margin-top: -12px;
+	@media(min-width:767px) {
+		font-size: 2em;
+		margin-top: 25px;
+	}
+	@media(min-width:992px) {
+		margin-top: 0;
+		font-size: 3em;
+	}
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+	margin: 0;
+}
+
+#portfolio * {
+	z-index: 2;
+}
+
+#portfolio .portfolio-item {
+	@media(min-width:767px) {
+		margin: 0 0 30px;
+	}
+}
+
+.btn-outline {
+	background: 0 0;
+	border: solid 2px $green;
+	color: $green;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-top: 15px;
+	text-transform: uppercase;
+	transition: all .3s ease-in-out;
+	@media(min-width:767px) {
+		width: 360px;
+	}
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+	color: $white;
+	background: $green;
+}
+
+/* ==========================================================================
+	Contact Section
+============================================================================= */
+
+section#contact {
+	background-color: $black;
+	background-image: url(../img/map-image.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 120px 0 40px;
+	@media(min-width:767px) {
+		padding-top: 130px;
+	}
+
+	h2 {
+		letter-spacing: 1px;
+	}
+}
+
+section#contact .section-heading {
+	color: $white;
+}
+
+section#contact .section-subheading {
+	color: $green;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.3em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	@media(min-width:767px) {
+		font-size: 1.7em;
+		margin: 20px 0;
+	}
+}
+
+section#contact .form-group {
+	margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+	padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+	height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+	height: 236px;
+	@media(min-width:767px) {
+		height: 257px;
+	}
+}
+
+section#contact .form-control:focus {
+	border-color: $green;
+	box-shadow: none;
+}
+
+section#contact .form-group input,
+textarea::-webkit-input-placeholder {
+	color: $gray;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+section#contact .form-group input,
+textarea:-moz-placeholder {
+	color: $gray;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+section#contact .form-group input,
+textarea::-moz-placeholder  {
+	color: $gray;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+section#contact .form-group input,
+textarea:-ms-input-placeholder {
+	color: $gray;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+section#contact .form-group input,
+.form-control {
+	color: $green;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+section#contact .text-danger {
+	color: $white;
+}
+
+.btn-xl {
+	background: $green;
+	border: none;
+	color: white;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	outline: none;
+	text-transform: uppercase;
+}
+
+.btn-xl:hover {
+	background: $lightGreen;
+}
+
+.alert-success {
+	background-color: $green;
+	border-color: $green;
+	button.close {
+		color: $white;
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+	Location/Footer Section
+============================================================================= */
+
+footer {
+	color: $black;
+	font-family: 'Oswald',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+footer h3 {
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+footer .footer-above {
+	padding-top: 50px;
+	background: url('../img/brickwall.png');
+}
+
+footer .footer-col {
+	margin-bottom: 50px;
+}
+
+footer .footer-below {
+	background-color: $white;
+	box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6);
+	color: $black;
+	padding: 25px 0;
+
+	p {
+		font-size: 1.1em;
+	}
+}
+
+.footer-above .location {
+	padding-bottom: 10px;
+}
+
+.footer-above p {
+	color: $green;
+	font-size: 1.5em;
+}
+
+.btn-social {
+	color: $green;
+	display: inline-block;
+	text-align: center;
+	i {
+		font-size: 2.5em;
+		@media(min-width:767px) {
+			font-size: 2.8em;
+		}
+		@media(min-width:1200px) {
+			font-size: 2.8em;
+		}
+	}
+}
+
+.footer-img {
+	height: 16px;
+	margin-bottom: 4.4px;
+	width: 154px;
+}
+
+.btn-social:hover {
+	color: $lightGreen;
+}
+
+.footer-above .social {
+	padding-bottom: 6px;
+}
+
+.footer-above .email {
+	padding-bottom: 11px;
+}
+
+.btn-mail {
+	font-size: 1.4em;
+	padding: 10px;
+}
+
+.footer-above .fa-envelope {
+	font-size: 1.15em;
+	vertical-align: top;
+	padding-top: 2px;
+}
+
+/* ==========================================================================
+	Scroll Bubble/Pop-up Modal's
+============================================================================= */
+
+.scroll-top {
+	z-index: 1049;
+	position: fixed;
+	right: 2%;
+	bottom: 2%;
+	width: 50px;
+	height: 50px;
+}
+
+.scroll-top .btn {
+	background: $green;
+	border: none;
+	color: $white;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.scroll-top .btn:focus {
+	outline: 0;
+}
+
+.portfolio-modal .modal-content {
+	padding: 100px 0;
+	min-height: 100%;
+	border: 0;
+	border-radius: 0;
+	text-align: center;
+	background-clip: border-box;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+	margin: 0;
+	font-size: 2.2em;
+	@media(min-width:767px) {
+		font-size: 3em;
+	}
+}
+
+.portfolio-modal .modal-content img {
+	margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content .item-details {
+	margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 75px;
+	height: 75px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+	opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+	z-index: 1051;
+	width: 1px;
+	height: 75px;
+	margin-left: 35px;
+	background-color: $green;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+	z-index: 1052;
+	width: 1px;
+	height: 75px;
+	background-color: $green;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.portfolio-modal{
+	@media(min-width:767px) {
+		.first {
+			padding-left: 0;
+		}
+		.last {
+			padding-right: 0;
+		}
+	}
+	img {
+		-webkit-box-shadow: 0 5px 10px #aaa;
+		   -moz-box-shadow: 0 5px 10px #aaa;
+		        box-shadow: 0 5px 10px #aaa;
+	}
+	p {
+		font-size: 1.4em;
+		text-align: left;
+	}
+	li {
+		font-size: 1.1em;
+	}
+	strong {
+		color: $green;
+	}
+	.btn {
+		background: $green;
+	}
+	.btn:hover {
+		background: $lightGreen;
+	}
+}
